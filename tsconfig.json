@@ -6,5 +6,12 @@
 */
 {
   "files": [],
-  "references": []
+  "references": [
+    {
+      "path": "./projects/ngx-snake-to-camel/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ngx-snake-to-camel/tsconfig.spec.json"
+    }
+]
 }
