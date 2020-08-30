@@ -8,9 +8,8 @@ describe('NgxSnakeToCamelComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgxSnakeToCamelComponent ]
-    })
-    .compileComponents();
+      declarations: [NgxSnakeToCamelComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
