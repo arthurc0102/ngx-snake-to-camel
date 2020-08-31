@@ -13,7 +13,7 @@ import { map } from 'rxjs/operators';
 import { camelize, decamelize } from '@ridi/object-case-converter';
 
 @Injectable()
-export class SnakeToCamelInterceptor implements HttpInterceptor {
+export class NgxSnakeToCamelInterceptor implements HttpInterceptor {
   constructor() {}
 
   intercept(
