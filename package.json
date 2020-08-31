@@ -5,6 +5,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:lib": "ng build ngx-snake-to-camel --prod",
+    "copy-files": "cp README.md dist/ngx-snake-to-camel",
+    "publish": "npm publish dist/ngx-snake-to-camel",
+    "release": "npm run build:lib && npm run copy-files && npm run publish",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
