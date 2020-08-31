@@ -2,6 +2,12 @@
 
 This is a interceptor for angular to convert http response body from snake to camel case and convert http body from camel to snake case.
 
+## Install
+
+```
+npm install ngx-snake-to-camel
+```
+
 ## Use
 
 ```typescript
