@@ -40,6 +40,128 @@
           }
         }
       }
+    },
+    "ngx-snake-to-camel-test-client": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/ngx-snake-to-camel-test-client",
+      "sourceRoot": "projects/ngx-snake-to-camel-test-client/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ngx-snake-to-camel-test-client",
+            "index": "projects/ngx-snake-to-camel-test-client/src/index.html",
+            "main": "projects/ngx-snake-to-camel-test-client/src/main.ts",
+            "polyfills": "projects/ngx-snake-to-camel-test-client/src/polyfills.ts",
+            "tsConfig": "projects/ngx-snake-to-camel-test-client/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/ngx-snake-to-camel-test-client/src/favicon.ico",
+              "projects/ngx-snake-to-camel-test-client/src/assets"
+            ],
+            "styles": [
+              "projects/ngx-snake-to-camel-test-client/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ngx-snake-to-camel-test-client/src/environments/environment.ts",
+                  "with": "projects/ngx-snake-to-camel-test-client/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ngx-snake-to-camel-test-client:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ngx-snake-to-camel-test-client:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ngx-snake-to-camel-test-client:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-snake-to-camel-test-client/src/test.ts",
+            "polyfills": "projects/ngx-snake-to-camel-test-client/src/polyfills.ts",
+            "tsConfig": "projects/ngx-snake-to-camel-test-client/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-snake-to-camel-test-client/karma.conf.js",
+            "assets": [
+              "projects/ngx-snake-to-camel-test-client/src/favicon.ico",
+              "projects/ngx-snake-to-camel-test-client/src/assets"
+            ],
+            "styles": [
+              "projects/ngx-snake-to-camel-test-client/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-snake-to-camel-test-client/tsconfig.app.json",
+              "projects/ngx-snake-to-camel-test-client/tsconfig.spec.json",
+              "projects/ngx-snake-to-camel-test-client/e2e/tsconfig.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/ngx-snake-to-camel-test-client/e2e/protractor.conf.js",
+            "devServerTarget": "ngx-snake-to-camel-test-client:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ngx-snake-to-camel-test-client:serve:production"
+            }
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-snake-to-camel"
