@@ -1,9 +1,24 @@
-import { NgModule } from '@angular/core';
-import { NgxSnakeToCamelComponent } from './ngx-snake-to-camel.component';
+import { NgModule, ModuleWithProviders } from '@angular/core';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
-  declarations: [NgxSnakeToCamelComponent],
+  declarations: [],
   imports: [],
-  exports: [NgxSnakeToCamelComponent],
+  exports: [],
 })
-export class NgxSnakeToCamelModule {}
+export class NgxSnakeToCamelModule {
+  constructor() {}
+
+  static forRoot(): ModuleWithProviders<NgxSnakeToCamelModule> {
+    return {
+      ngModule: NgxSnakeToCamelModule,
+      providers: [
+        {
+          provide: HTTP_INTERCEPTORS,
+          useClass: NgxSnakeToCamelModule,
+          multi: true,
+        },
+      ],
+    };
+  }
+}

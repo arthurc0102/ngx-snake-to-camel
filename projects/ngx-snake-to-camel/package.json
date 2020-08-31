@@ -1,11 +1,34 @@
 {
   "name": "ngx-snake-to-camel",
+  "description": "This is a interceptor for angular to convert http response body from snake to camel case and convert http body from camel to snake case.",
   "version": "0.0.1",
+  "author": {
+    "name": "Arthur Chang",
+    "email": "arthurc0102@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arthurc0102/ngx-snake-to-camel"
+  },
+  "bugs": {
+    "url": "https://github.com/arthurc0102/ngx-snake-to-camel/issues"
+  },
+  "keywords": [
+    "angular",
+    "ng",
+    "http",
+    "case",
+    "convert",
+    "converter",
+    "camel case",
+    "snake case"
+  ],
   "peerDependencies": {
     "@angular/common": "^10.0.14",
     "@angular/core": "^10.0.14"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "^2.0.0",
+    "@ridi/object-case-converter": "^2.0.4"
   }
 }

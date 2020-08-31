@@ -2,6 +2,10 @@
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/ngx-snake-to-camel",
   "lib": {
-    "entryFile": "src/public-api.ts"
-  }
+    "entryFile": "src/public-api.ts",
+    "umdModuleIds": {
+      "@ridi/object-case-converter": "@ridi/object-case-converter"
+    }
+  },
+  "whitelistedNonPeerDependencies": ["@ridi/object-case-converter"]
 }
