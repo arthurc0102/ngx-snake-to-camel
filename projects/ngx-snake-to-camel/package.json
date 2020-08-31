@@ -1,7 +1,7 @@
 {
   "name": "ngx-snake-to-camel",
   "description": "This is a interceptor for angular to convert http response body from snake to camel case and convert http request body from camel to snake case.",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": {
     "name": "Arthur Chang",
     "email": "arthurc0102@gmail.com"
@@ -15,8 +15,11 @@
   },
   "keywords": [
     "angular",
+    "angular2",
     "ng",
+    "ng2",
     "http",
+    "interceptor",
     "case",
     "convert",
     "converter",
