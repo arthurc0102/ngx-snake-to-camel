@@ -1,6 +1,8 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
+import { NgxSnakeToCamelInterceptor } from './interceptors/ngx-snake-to-camel.interceptor';
+
 @NgModule({
   declarations: [],
   imports: [],
@@ -15,7 +17,7 @@ export class NgxSnakeToCamelModule {
       providers: [
         {
           provide: HTTP_INTERCEPTORS,
-          useClass: NgxSnakeToCamelModule,
+          useClass: NgxSnakeToCamelInterceptor,
           multi: true,
         },
       ],
